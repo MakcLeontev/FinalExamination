@@ -1,0 +1,174 @@
+db@db-linux:~/attestation2$ cat pets 
+dog
+cat
+hamster
+db@db-linux:~/attestation2$ cat>packanimals
+horse
+camel
+donkey
+db@db-linux:~/attestation2$ cat pets packanimals >mansfriends
+db@db-linux:~/attestation2$ cat mansfriends 
+dog
+cat
+hamster
+horse
+camel
+donkey
+db@db-linux:~/attestation2$ mkdir somedir
+db@db-linux:~/attestation2$ sudo mv mansfriends /home/db/attestation2/somedir
+db@db-linux:~/attestation2$ cd somedir/
+db@db-linux:~/attestation2/somedir$ ll
+итого 12
+drwxrwxr-x 2 db db 4096 апр 12 21:03 ./
+drwxrwxr-x 3 db db 4096 апр 12 21:03 ../
+-rw-rw-r-- 1 db db   34 апр 12 21:01 mansfriends
+
+db@db-linux:~$ cat /etc/apt/sources.list | grep -v ^#
+
+deb http://ru.archive.ubuntu.com/ubuntu/ jammy main restricted
+
+deb http://ru.archive.ubuntu.com/ubuntu/ jammy-updates main restricted
+
+deb http://ru.archive.ubuntu.com/ubuntu/ jammy universe
+deb http://ru.archive.ubuntu.com/ubuntu/ jammy-updates universe
+
+deb http://ru.archive.ubuntu.com/ubuntu/ jammy multiverse
+deb http://ru.archive.ubuntu.com/ubuntu/ jammy-updates multiverse
+
+deb http://ru.archive.ubuntu.com/ubuntu/ jammy-backports main restricted universe multiverse
+
+deb http://security.ubuntu.com/ubuntu jammy-security main restricted
+deb http://security.ubuntu.com/ubuntu jammy-security universe
+deb http://security.ubuntu.com/ubuntu jammy-security multiverse
+
+deb http://nginx.org/packages/ubuntu jammy nginx
+db@db-linux:~$ sudo nano /etc/apt/sources.list 
+db@db-linux:~$ cat /etc/apt/sources.list | grep -v ^#
+
+deb http://ru.archive.ubuntu.com/ubuntu/ jammy main restricted
+
+deb http://ru.archive.ubuntu.com/ubuntu/ jammy-updates main restricted
+
+deb http://ru.archive.ubuntu.com/ubuntu/ jammy universe
+deb http://ru.archive.ubuntu.com/ubuntu/ jammy-updates universe
+
+deb http://ru.archive.ubuntu.com/ubuntu/ jammy multiverse
+deb http://ru.archive.ubuntu.com/ubuntu/ jammy-updates multiverse
+
+deb http://ru.archive.ubuntu.com/ubuntu/ jammy-backports main restricted universe multiverse
+
+deb http://security.ubuntu.com/ubuntu jammy-security main restricted
+deb http://security.ubuntu.com/ubuntu jammy-security universe
+deb http://security.ubuntu.com/ubuntu jammy-security multiverse
+
+deb http://nginx.org/packages/ubuntu jammy nginx
+deb http://repo.mysql.com/apt/ubuntu/ jammy mysql-8.0
+db@db-linux:~$ sudo apt-get update
+Сущ:1 http://ru.archive.ubuntu.com/ubuntu jammy InRelease
+Сущ:2 http://ru.archive.ubuntu.com/ubuntu jammy-updates InRelease                                 
+Сущ:3 http://repo.mysql.com/apt/ubuntu jammy InRelease                                            
+Сущ:4 http://ru.archive.ubuntu.com/ubuntu jammy-backports InRelease                               
+Сущ:5 http://repo.mysql.com/apt/ubuntu trusty InRelease                                           
+Сущ:6 http://nginx.org/packages/ubuntu jammy InRelease                                            
+Сущ:7 https://download.docker.com/linux/ubuntu jammy InRelease                                    
+Сущ:8 http://security.ubuntu.com/ubuntu jammy-security InRelease                                  
+Пол:9 http://repo.mysql.com/apt/ubuntu jammy/mysql-8.0 amd64 Packages [8?555 B]
+Получено 8?555 B за 1с (6?036 B/s)        
+Чтение списков пакетов… Готово
+W: http://repo.mysql.com/apt/ubuntu/dists/jammy/InRelease: Key is stored in legacy trusted.gpg keyring (/etc/apt/trusted.gpg), see the DEPRECATION section in apt-key(8) for details.
+W: http://repo.mysql.com/apt/ubuntu/dists/trusty/InRelease: Key is stored in legacy trusted.gpg keyring (/etc/apt/trusted.gpg), see the DEPRECATION section in apt-key(8) for details.
+W: http://nginx.org/packages/ubuntu/dists/jammy/InRelease: Key is stored in legacy trusted.gpg keyring (/etc/apt/trusted.gpg), see the DEPRECATION section in apt-key(8) for details.
+N: Пропускается получение настроенного файла «nginx/binary-i386/Packages», так как репозиторий «http://nginx.org/packages/ubuntu jammy InRelease» не поддерживает архитектуру «i386»
+W: https://download.docker.com/linux/ubuntu/dists/jammy/InRelease: Key is stored in legacy trusted.gpg keyring (/etc/apt/trusted.gpg), see the DEPRECATION section in apt-key(8) for details.
+db@db-linux:~$ sudo apt-get install mysql-server
+Чтение списков пакетов… Готово
+Построение дерева зависимостей… Готово
+Чтение информации о состоянии… Готово         
+Следующие пакеты устанавливались автоматически и больше не требуются:
+  libcgi-fast-perl libcgi-pm-perl libevent-core-2.1-7 libevent-pthreads-2.1-7 libfcgi-bin
+  libfcgi-perl libfcgi0ldbl libhtml-template-perl libprotobuf-lite23
+Для их удаления используйте «sudo apt autoremove».
+Будут установлены следующие дополнительные пакеты:
+  mysql-client mysql-common mysql-community-client mysql-community-client-core
+  mysql-community-client-plugins mysql-community-server mysql-community-server-core
+Следующие пакеты будут УДАЛЕНЫ:
+  mysql-client-8.0 mysql-client-core-8.0 mysql-server-8.0 mysql-server-core-8.0
+Следующие НОВЫЕ пакеты будут установлены:
+  mysql-client mysql-community-client mysql-community-client-core mysql-community-client-plugins
+  mysql-community-server mysql-community-server-core mysql-server
+Следующие пакеты будут обновлены:
+  mysql-common
+Обновлено 1 пакетов, установлено 7 новых пакетов, для удаления отмечено 4 пакетов, и 140 пакетов не обновлено.
+Необходимо скачать 31,3 MB архивов.
+После данной операции объём занятого дискового пространства возрастёт на 33,3 MB.
+Хотите продолжить? [Д/н] y
+Пол:1 http://repo.mysql.com/apt/ubuntu jammy/mysql-8.0 amd64 mysql-common amd64 8.0.32-1ubuntu22.04 [68,6 kB]
+Пол:2 http://repo.mysql.com/apt/ubuntu jammy/mysql-8.0 amd64 mysql-community-client-plugins amd64 8.0.32-1ubuntu22.04 [1?437 kB]
+Пол:3 http://repo.mysql.com/apt/ubuntu jammy/mysql-8.0 amd64 mysql-community-client-core amd64 8.0.32-1ubuntu22.04 [2?184 kB]
+Пол:4 http://repo.mysql.com/apt/ubuntu jammy/mysql-8.0 amd64 mysql-community-client amd64 8.0.32-1ubuntu22.04 [2?458 kB]
+Пол:5 http://repo.mysql.com/apt/ubuntu jammy/mysql-8.0 amd64 mysql-client amd64 8.0.32-1ubuntu22.04 [67,3 kB]
+Пол:6 http://repo.mysql.com/apt/ubuntu jammy/mysql-8.0 amd64 mysql-community-server-core amd64 8.0.32-1ubuntu22.04 [25,0 MB]
+Пол:7 http://repo.mysql.com/apt/ubuntu jammy/mysql-8.0 amd64 mysql-community-server amd64 8.0.32-1ubuntu22.04 [79,1 kB]
+Пол:8 http://repo.mysql.com/apt/ubuntu jammy/mysql-8.0 amd64 mysql-server amd64 8.0.32-1ubuntu22.04 [67,3 kB]
+Получено 31,3 MB за 3с (9?752 kB/s)               
+Предварительная настройка пакетов …
+(Чтение базы данных … на данный момент установлено 188924 файла и каталога.)
+Удаляется mysql-server-8.0 (8.0.32-0ubuntu0.22.04.2) …
+update-alternatives: используется /etc/mysql/my.cnf.fallback для предоставления /etc/mysql/my.cnf (my.cnf) в автоматическом режиме
+Удаляется mysql-client-8.0 (8.0.32-0ubuntu0.22.04.2) …
+Удаляется mysql-client-core-8.0 (8.0.32-0ubuntu0.22.04.2) …
+Удаляется mysql-server-core-8.0 (8.0.32-0ubuntu0.22.04.2) …
+(Чтение базы данных … на данный момент установлен 188721 файл и каталог.)
+Подготовка к распаковке …/0-mysql-common_8.0.32-1ubuntu22.04_amd64.deb …
+Распаковывается mysql-common (8.0.32-1ubuntu22.04) на замену (5.8+1.0.8) …
+Выбор ранее не выбранного пакета mysql-community-client-plugins.
+Подготовка к распаковке …/1-mysql-community-client-plugins_8.0.32-1ubuntu22.04_amd64.deb …
+Распаковывается mysql-community-client-plugins (8.0.32-1ubuntu22.04) …
+Выбор ранее не выбранного пакета mysql-community-client-core.
+Подготовка к распаковке …/2-mysql-community-client-core_8.0.32-1ubuntu22.04_amd64.deb …
+Распаковывается mysql-community-client-core (8.0.32-1ubuntu22.04) …
+Выбор ранее не выбранного пакета mysql-community-client.
+Подготовка к распаковке …/3-mysql-community-client_8.0.32-1ubuntu22.04_amd64.deb …
+Распаковывается mysql-community-client (8.0.32-1ubuntu22.04) …
+Выбор ранее не выбранного пакета mysql-client.
+Подготовка к распаковке …/4-mysql-client_8.0.32-1ubuntu22.04_amd64.deb …
+Распаковывается mysql-client (8.0.32-1ubuntu22.04) …
+Выбор ранее не выбранного пакета mysql-community-server-core.
+Подготовка к распаковке …/5-mysql-community-server-core_8.0.32-1ubuntu22.04_amd64.deb …
+Распаковывается mysql-community-server-core (8.0.32-1ubuntu22.04) …
+Выбор ранее не выбранного пакета mysql-community-server.
+Подготовка к распаковке …/6-mysql-community-server_8.0.32-1ubuntu22.04_amd64.deb …
+Распаковывается mysql-community-server (8.0.32-1ubuntu22.04) …
+Выбор ранее не выбранного пакета mysql-server.
+Подготовка к распаковке …/7-mysql-server_8.0.32-1ubuntu22.04_amd64.deb …
+Распаковывается mysql-server (8.0.32-1ubuntu22.04) …
+Настраивается пакет mysql-common (8.0.32-1ubuntu22.04) …
+Устанавливается новая версия файла настройки /etc/mysql/conf.d/mysql.cnf …
+Устанавливается новая версия файла настройки /etc/mysql/my.cnf.fallback …
+Настраивается пакет mysql-community-server-core (8.0.32-1ubuntu22.04) …
+Настраивается пакет mysql-community-client-plugins (8.0.32-1ubuntu22.04) …
+Настраивается пакет mysql-community-client-core (8.0.32-1ubuntu22.04) …
+Настраивается пакет mysql-community-client (8.0.32-1ubuntu22.04) …
+Настраивается пакет mysql-client (8.0.32-1ubuntu22.04) …
+Настраивается пакет mysql-community-server (8.0.32-1ubuntu22.04) …
+Устанавливается новая версия файла настройки /etc/apparmor.d/usr.sbin.mysqld …
+Устанавливается новая версия файла настройки /etc/mysql/mysql.cnf …
+Устанавливается новая версия файла настройки /etc/mysql/mysql.conf.d/mysqld.cnf …
+update-alternatives: используется /etc/mysql/mysql.cnf для предоставления /etc/mysql/my.cnf (my.cnf) в автоматическом режиме
+Настраивается пакет mysql-server (8.0.32-1ubuntu22.04) …
+Обрабатываются триггеры для man-db (2.10.2-1) …
+Обрабатываются триггеры для libc-bin (2.35-0ubuntu3.1) …
+db@db-linux:~/attestation2$ apt download zip
+Пол:1 http://ru.archive.ubuntu.com/ubuntu jammy/main amd64 zip amd64 3.0-12build2 [176 kB]
+Получено 176 kB за 0с (979 kB/s)
+db@db-linux:~/attestation2$ sudo dpkg -i zip_3.0-12build2_amd64.deb 
+Выбор ранее не выбранного пакета zip.
+(Чтение базы данных … на данный момент установлено 188984 файла и каталога.)
+Подготовка к распаковке zip_3.0-12build2_amd64.deb …
+Распаковывается zip (3.0-12build2) …
+Настраивается пакет zip (3.0-12build2) …
+Обрабатываются триггеры для man-db (2.10.2-1) …
+b@db-linux:~/attestation2$ sudo dpkg -P zip
+(Чтение базы данных … на данный момент установлено 188998 файлов и каталогов.)
+Удаляется zip (3.0-12build2) …
+Обрабатываются триггеры для man-db (2.10.2-1) …

@@ -1,0 +1,72 @@
+mkdir attestation2
+ 1069  cd attestation2
+ 1070  cat>pets
+ 1071  ll
+ 1072  cat pets 
+ 1073  cat>packanimals
+ 1074  cat packanimals 
+ 1075  cat>packanimals
+ 1076  cat packanimals 
+ 1077  cat>packanimals
+ 1078  cat packanimals 
+ 1079  cat pets packanimals >mansfriends
+ 1080  cat mansfriends 
+ 1081  mkdir somedir
+ 1082  ll
+ 1083  mv mansfriends /somedir
+ 1084  sudo mv mansfriends /somedir
+ 1085  ll
+ 1086  cd somedir/
+ 1087  ll
+ 1088  where mansfriends
+ 1089  cd ..
+ 1090  cd somedir
+ 1091  find mansfriends
+ 1092* 
+ 1093  cat pets packanimals >mansfriends
+ 1094  ll
+ 1095  cd somedir/
+ 1096  pwd
+ 1097  cd ..
+ 1098  sudo mv mansfriends /home/db/attestation2/somedir
+ 1099  ll
+ 1100  cd somedir/
+ 1101  ll
+ 1102  cd ..
+ 1103  nano /etc/apt/sources.list
+ 1104  cat /etc/apt/sources.list | grep -v ^#
+ 1105  wget https://dev.mysql.com/get/mysql-apt-config_0.8.12-1_all.deb
+ 1106  sudo dpkg -i mysql-apt-config_0.8.12-1_all.deb
+ 1107  sudo apt-get update
+ 1108  sudo apt install mysql-server mysql-client
+ 1109  cat /etc/apt/sources.list | grep -v ^#
+ 1110  dpkg --help
+ 1111  sudo purge mysql-server mysql-client
+ 1112  sudo -p mysql-server mysql-client
+ 1113  sudo rm mysql-server mysql-client
+ 1114  sudo remove mysql-server mysql-client
+ 1115  sudo apt remove mysql-server mysql-client
+ 1116  sudo dpkg -p mysql-apt-config_0.8.12-1_all.deb
+ 1117  sudo dpkg -i mysql-apt-config_0.8.12-1_all.deb
+ 1118  sudo apt-get update
+ 1119  sudo apt-key adv --keyserver pgp.mit.edu --recv-keys 3A79BD29
+ 1120  cat /etc/apt/sources.list | grep -v ^#
+ 1121  nano /etc/apt/sources.list 
+ 1122  sudo nano /etc/apt/sources.list 
+ 1123  cat /etc/apt/sources.list | grep -v ^#
+ 1124  sudo apt-get install mysql-server
+ 1125  sudo nano /etc/apt/sources.list 
+ 1126  sudo apt-get remove mysql-server
+ 1127  sudo apt-get update
+ 1128  sudo nano /etc/apt/sources.list 
+ 1129  sudo apt-get update
+ 1130  sudo apt-get install mysql-server
+ 1131  cd attestation2
+ 1132  ll
+ 1133  apt download zip
+ 1134  sudo dpkg -i zip_3.0-12build2_amd64.deb 
+ 1135  sudo dpkg -p zip_3.0-12build2_amd64.deb 
+ 1136  sudo dpkg -P zip_3.0-12build2_amd64.deb 
+ 1137  sudo dpkg -P zip
+ 1138  hystory
+ 1139  history
