@@ -1,13 +1,20 @@
 package Animals;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
-public abstract class Animal {
+public class Animal {
     private long id;
     private String name;
-    private LocalDate birthday;
-    private List<String>commands;
+    private String birthday;
+    private List<String>commands = new ArrayList<>();
+
+    public Animal(long id, String name, String birthday) {
+        this.id = id;
+        this.name = name;
+        this.birthday = birthday;
+    }
 
     public long getId() {
         return id;
@@ -25,11 +32,11 @@ public abstract class Animal {
         this.name = name;
     }
 
-    public LocalDate getBirthday() {
+    public String getBirthday() {
         return birthday;
     }
 
-    public void setBirthday(LocalDate birthday) {
+    public void setBirthday(String birthday) {
         this.birthday = birthday;
     }
 
@@ -39,5 +46,14 @@ public abstract class Animal {
 
     public void setCommands(List<String> commands) {
         this.commands = commands;
+    }
+
+    @Override
+    public String toString() {
+        return "Animal{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", birthday='" + birthday + '\'' +
+                '}';
     }
 }

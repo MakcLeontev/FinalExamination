@@ -1,3 +1,5 @@
+import Animals.Cat;
+import Animals.Dog;
 import View.View;
 
 import java.io.IOException;
